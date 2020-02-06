@@ -1,0 +1,18 @@
+name: snap-together
+version: 0.0.1
+summary: Just a test together snap
+description: >
+  Just a test python snap
+
+confinement: strict
+base: core18
+
+parts:
+  test-snap-lukewh:
+    plugin: python
+    python-version: python3
+    source: .
+
+apps:
+  test-snap-lukewh:
+    command: python3 test_snap.py
